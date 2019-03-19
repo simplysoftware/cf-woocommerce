@@ -1,0 +1,26 @@
+{
+  "name": "woocommerce-caldera-integration",
+  "title": "Caldera Form Woocommerce Integration add-on",
+  "description": "Integrates Caldera Forms with Woocommerce so that form submissions can result different actions performed in woocommerce.",
+  "version": "1.0.0",
+  "homepage": "https://realbigplugins.com/",
+  "author": {
+    "name": "Real Big Plugins",
+    "email": "info@realbigplugins.com",
+    "url": "https://realbigplugins.com/"
+  },
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-cli": "~0.1.11",
+    "grunt-contrib-clean": "^0.6.0",
+    "grunt-contrib-compress": "^0.13.0",
+    "grunt-contrib-copy": "^0.7.0",
+    "grunt-git": "^0.3.3",
+    "grunt-shell": "^1.1.1",
+    "grunt-text-replace": "^0.4.0"
+  },
+  "keywords": [],
+  "dependencies": {
+    "composer": "^4.1.0"
+  }
+}
