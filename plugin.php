@@ -132,12 +132,22 @@ class WooCommerce_Caldera_Integration {
 		 */
 		add_action('init', [ $this, 'woo_cal_init_session' ], 1);
 		add_action( 'admin_init', [ $this, 'woo_cal_init_license' ] );
+        add_action( 'wp_enqueue_scripts', [ $this, 'frontend_enqueue_scripts' ], 11 );
 
 		add_action( 'plugins_loaded', [ $this, 'upgrade' ] );
 		add_action( 'admin_notices', [ $this, 'disable_plugin' ] );
 		
 		add_filter( 'wc_order_statuses', [ $this, 'woo_cal_new_order_statuses' ] );
 	}
+
+    /**
+     * Enqueue scripts on frontend
+     *
+     * @since 1.0
+     */
+    public function frontend_enqueue_scripts() {
+        wp_enqueue_style( 'bosedd-front-style', WOO_CAL_ASSETS_URL . 'front.css' );
+    }
 	
 	/**
      * Initiate the Sessions
